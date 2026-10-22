@@ -15,6 +15,16 @@ Exploratory data analysis of 100,000 monthly records of 12,500 Paisabazaar custo
 - **Income alone does not explain credit score.** Median income is 32,065 for Poor and 44,928 for Good customers, but the ranges overlap heavily. Debt-to-income separates the groups far better (median 0.063 vs 0.012).
 - **Credit utilization shows no real link with score.** It is about 32% in all three groups, so it should not be used alone as a risk signal.
 
+## Selected Charts
+
+![Share of Poor-score customers by number of loans](images/chart12_poor_share_by_loans.png)
+
+![Number of delayed payments by credit score](images/chart6_delayed_payments.png)
+
+![Credit score by minimum-amount payment](images/chart11_min_payment.png)
+
+![Correlation between credit score and key features](images/chart13_correlation_heatmap.png)
+
 ## What I Did
 - **Data cleaning:** labelled `NM` values in `Payment_of_Min_Amount` as `Unknown` (12,007 rows), checked income outliers (kept, as they are genuine high earners), validated numeric ranges, and dropped `Name` and `SSN` as personal identifiers.
 - **Feature engineering:** created `Debt_to_Income` (outstanding debt divided by annual income).
